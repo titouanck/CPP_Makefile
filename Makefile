@@ -10,7 +10,7 @@ SRCS_FILES = $(shell ls srcs)
 INC_PATH = inc/
 INC_FILES = $(shell ls inc)
 
-OBJS_PATH = ./objs/
+OBJS_PATH = objs/
 OBJS_FILES = ${patsubst %.cpp, ${OBJS_PATH}/%.o, ${SRCS_FILES}}
 
 DEPENDENCIES = Makefile
