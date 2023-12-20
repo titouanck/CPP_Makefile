@@ -5,10 +5,10 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 ##########################################################################
 
 SRCS_PATH = srcs/
-SRCS_FILES = $(shell ls srcs)
+SRCS_FILES = $(shell find srcs/ -name '*.cpp' -exec basename {} \;)
 
 INC_PATH = inc/
-INC_FILES = $(shell ls inc)
+INC_FILES = $(shell find inc/ -name '*.hpp' -exec basename {} \;)
 
 OBJS_PATH = objs/
 OBJS_FILES = ${patsubst %.cpp, ${OBJS_PATH}/%.o, ${SRCS_FILES}}
